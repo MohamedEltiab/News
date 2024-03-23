@@ -15,7 +15,7 @@ class CustomBackgroundWidget extends StatelessWidget {
       decoration: const BoxDecoration(
         color: Colors.white,
         image: DecorationImage(
-          image: AssetImage("assets/images/pattern.png"),
+          image: AssetImage("assets/image/pattern.png"),
           fit: BoxFit.cover,
         ),
       ),
