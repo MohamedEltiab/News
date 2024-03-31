@@ -1,0 +1,17 @@
+
+{
+"newsapp":"NewsApp",
+"sports":"Sports ",
+"politics":"Politics",
+"health":"Health",
+"business":"Business",
+"environment":"Environment",
+"science":"science",
+
+"categories":"Categories",
+"settings":"Settings",
+"language":"Language"
+
+
+
+}

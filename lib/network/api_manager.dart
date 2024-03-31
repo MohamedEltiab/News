@@ -5,7 +5,6 @@ import 'package:http/http.dart' as http;
 
 import '../core/config/constants.dart';
 import '../pages/models/article_model.dart';
-import '../pages/models/datailsModel.dart';
 import '../pages/models/source_model.dart';
 
 class ApiManager {
@@ -70,5 +69,4 @@ class ApiManager {
       throw Exception("Error fetch data articles: ");
     }
   }
-
 }
