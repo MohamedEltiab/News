@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../core/config/constants.dart';
+import '../../../core/config/pages_route_name.dart';
+import '../../../main.dart';
 
 class CustomDrawer extends StatelessWidget {
   Function onDrawerClicked;
@@ -12,6 +15,7 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var lang = AppLocalizations.of(context);
     return Container(
       width: Constant.mediaQuery.size.width * 0.8,
       color: Colors.white,
@@ -23,7 +27,7 @@ class CustomDrawer extends StatelessWidget {
             color: Constant.theme.primaryColor,
             height: 170,
             child: Text(
-              "News App!",
+              lang!.newsapp,
               style: Constant.theme.textTheme.titleLarge,
             ),
           ),
@@ -43,7 +47,7 @@ class CustomDrawer extends StatelessWidget {
                   ),
                   const SizedBox(width: 8.0),
                   Text(
-                    "Categories",
+                    Constant.lang!.categories,
                     style: Constant.theme.textTheme.titleLarge
                         ?.copyWith(color: Colors.black),
                   ),
@@ -52,6 +56,9 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           InkWell(
+            onTap: () {
+              navigatorKey.currentState!.pushNamed(PagesRouteName.settingsView);
+            },
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
@@ -63,7 +70,7 @@ class CustomDrawer extends StatelessWidget {
                   ),
                   const SizedBox(width: 8.0),
                   Text(
-                    "Settings",
+                    Constant.lang!.settings,
                     style: Constant.theme.textTheme.titleLarge
                         ?.copyWith(color: Colors.black),
                   ),
